@@ -1,0 +1,252 @@
+[
+  {
+    "titulo": "Envolvimento Profissional",
+    "questoes": [
+      {
+        "titulo": "1.1 Há algumas possibilidades de canais para melhorar a comunicação com estudantes e colegas.",
+        "opcoes": [
+          "Raramente uso canais de comunicação digital.",
+          "Uso canais de comunicação básicos, por exemplo, e-mail.",
+          "Combino diferentes canais de comunicação, como e-mail, redes sociais, aplicativos de mensagens e sites.",
+          "Seleciono, ajusto e combino, frequentemente, diferentes soluções digitais para me comunicar eficazmente.",
+          "Reflito, discuto e desenvolvo as minhas estratégias de comunicação proativamente com estudantes e docentes."
+        ]
+      },
+      {
+        "titulo": "1.2 Uso tecnologias digitais para trabalhar com colegas dentro e fora da minha instituição.",
+        "opcoes": [
+          "Raramente tenho oportunidade para colaborar com outros colegas.",
+          "Às vezes troco materiais com colegas, por exemplo, via e-mail.",
+          "Entre colegas, trabalhamos juntos em ambientes colaborativos ou usamos arquivos/drives compartilhados.",
+          "Troco ideias e materiais que já existem, também com colegas externos à minha instituição.",
+          "Crio/produzo materiais juntamente com outros colegas numa rede online de profissionais de diferentes instituições."
+        ]
+      },
+      {
+        "titulo": "1.3 Desenvolvo minhas habilidades de ensino digital ativamente.",
+        "opcoes": [
+          "Raramente tenho tempo para melhorar minhas habilidades de ensino digital.",
+          "Aprimoro minhas habilidades por meio da reflexão e experimentação.",
+          "Uso uma variedade de recursos digitais para desenvolver minhas habilidades no ensino digital.",
+          "Discuto com colegas como usar tecnologias digitais para inovar e melhorar a prática educativa.",
+          "Ajudo os colegas a desenvolverem as suas estratégias para melhorar o uso das tecnologias digitais no ensino."
+        ]
+      },
+      {
+        "titulo": "1.4 Participo em oportunidades de formação on-line.",
+        "opcoes": [
+          "Esta é uma área nova que ainda não considerei.",
+          "Ainda não, mas estou definitivamente interessado(a).",
+          "Participei de formação on-line poucas vezes.",
+          "Em várias oportunidades participei de formação on-line.",
+          "Participo frequentemente de vários tipos de formação on-line."
+        ]
+      }
+    ]
+  },
+  {
+    "titulo": "Recursos Digitais",
+    "questoes": [
+      {
+        "titulo": "2.1 Uso diferentes sites e estratégias de pesquisa para encontrar e selecionar recursos digitais.",
+        "opcoes": [
+          "Raramente uso a internet para procurar recursos.",
+          "Busco em diferentes sites e plataformas de recursos educacionais conteúdos relevantes.",
+          "Avalio e seleciono os recursos com base na aprendizagem dos estudantes.",
+          "Comparo recursos usando uma série de critérios relevantes.",
+          "Indico aos colegas recursos e estratégias de pesquisa."
+        ]
+      },
+      {
+        "titulo": "2.2 Crio meus próprios recursos digitais e adapto os recursos existentes.",
+        "opcoes": [
+          "Não, não crio tecnologias digitais próprias.",
+          "Crio materiais para as aulas fazendo uso de um computador, mas depois os imprimo.",
+          "Crio apresentações digitais, mas não sei fazer muito mais do que isso.",
+          "Crio diferentes tipos de recursos digitais.",
+          "Organizo e adapto recursos complexos e interativos."
+        ]
+      },
+      {
+        "titulo": "2.3 Protejo conteúdos sensíveis de forma eficaz.",
+        "opcoes": [
+          "Não preciso, pois a instituição se encarrega disto.",
+          "Evito armazenar dados pessoais eletronicamente.",
+          "Protejo alguns dados pessoais com senha.",
+          "Sempre protejo os arquivos ou dados pessoais com senha.",
+          "Protejo dados pessoais da melhor forma possível."
+        ]
+      }
+    ]
+  },
+  {
+    "titulo": "Ensino E Aprendizagem",
+    "questoes": [
+      {
+        "titulo": "3.1 Pondero como, quando e por que usar tecnologias digitais na aula.",
+        "opcoes": [
+          "Não uso, ou raramente uso, tecnologias em aula.",
+          "Faço uma utilização básica do equipamento disponível.",
+          "Uso uma variedade considerável de recursos e ferramentas digitais no ensino.",
+          "Uso ferramentas digitais o quanto posso para melhorar sistematicamente o ensino.",
+          "Uso ferramentas digitais inclusive para implementar estratégias pedagógicas inovadoras."
+        ]
+      },
+      {
+        "titulo": "3.2 Acompanho as atividades e interações dos estudantes nos ambientes colaborativos on-line.",
+        "opcoes": [
+          "Não utilizo ambientes digitais com os meus estudantes.",
+          "Não acompanho a atividade dos estudantes nos ambientes on-line que utilizo.",
+          "Ocasionalmente verifico as discussões dos estudantes.",
+          "Acompanho e analiso a atividade on-line dos meus estudantes regularmente.",
+          "Intervenho com comentários motivadores ou corretivos regularmente."
+        ]
+      },
+      {
+        "titulo": "3.3 Quando meus estudantes trabalham em grupos, usam tecnologias digitais.",
+        "opcoes": [
+          "Meus estudantes não trabalham em grupos.",
+          "Não é possível, para mim, integrar tecnologias durante os trabalhos em grupos.",
+          "Incentivo os estudantes a trabalharem em grupos para procurar informação on-line.",
+          "Peço aos estudantes que trabalham em grupos que utilizem a internet.",
+          "Meus estudantes trocam evidências e criam conhecimento juntos."
+        ]
+      },
+      {
+        "titulo": "3.4 Uso tecnologias digitais para permitir que os estudantes planifiquem.",
+        "opcoes": [
+          "Não é possível no meu contexto de trabalho.",
+          "Meus estudantes refletem sobre sua aprendizagem, mas não com tecnologias digitais.",
+          "Às vezes uso algo do gênero, como por exemplo um quiz on-line.",
+          "Uso várias ferramentas digitais para permitir que os estudantes planejem.",
+          "Integro diferentes ferramentas digitais para planejar e monitorar o progresso dos estudantes."
+        ]
+      }
+    ]
+  },
+  {
+    "titulo": "Avaliação",
+    "questoes": [
+      {
+        "titulo": "4.1 Uso ferramentas de avaliação digital para monitorizar o progresso dos estudantes.",
+        "opcoes": [
+          "Não monitoro o progresso dos estudantes.",
+          "Monitoro regularmente o progresso, mas não por meios digitais.",
+          "Às vezes uso uma ferramenta digital para controlar o progresso dos estudantes.",
+          "Uso diferentes ferramentas digitais para monitorar o progresso dos estudantes.",
+          "Sempre monitoro o progresso dos estudantes por meio de ferramentas digitais."
+        ]
+      },
+      {
+        "titulo": "4.2 Analiso todos os dados disponíveis dos alunos.",
+        "opcoes": [
+          "Esses dados não estão disponíveis e/ou não é minha responsabilidade analisá-los.",
+          "Em parte. Apenas analiso dados que considero academicamente relevantes.",
+          "Também tenho em consideração dados sobre a atividade e o comportamento dos estudantes.",
+          "Examino regularmente as evidências disponíveis.",
+          "Analiso dados frequentemente e intervenho de um modo que considero adequado."
+        ]
+      },
+      {
+        "titulo": "4.3 Uso tecnologias digitais para fornecer um feedback eficaz.",
+        "opcoes": [
+          "O feedback não é necessário no meu contexto de trabalho.",
+          "Forneço feedback aos estudantes, mas não em formato digital.",
+          "Às vezes utilizo ferramentas digitais para fornecer feedback.",
+          "Uso variadas ferramentas digitais para fornecer feedback.",
+          "Uso frequentemente abordagens digitais para fornecer feedback."
+        ]
+      }
+    ]
+  },
+  {
+    "titulo": "Capacitação dos Aprendentes",
+    "questoes": [
+      {
+        "titulo": "5.1 Quando crio tarefas digitais, considero potenciais dificuldades práticas ou técnicas.",
+        "opcoes": [
+          "Não crio tarefas digitais.",
+          "Os meus estudantes não têm problemas em utilizar tecnologia digital.",
+          "Adapto a tarefa para minimizar dificuldades.",
+          "Discuto possíveis obstáculos com os estudantes e delineio soluções.",
+          "Dou espaço para a variedade e adapto a tarefa."
+        ]
+      },
+      {
+        "titulo": "5.2 Uso tecnologias digitais para proporcionar oportunidades de aprendizagem personalizadas.",
+        "opcoes": [
+          "No meu contexto de trabalho, pede-se a todos os estudantes que façam as mesmas atividades.",
+          "Forneço aos estudantes recomendações de recursos adicionais.",
+          "Ofereço atividades digitais opcionais para os estudantes.",
+          "Sempre que possível, utilizo tecnologias digitais para oferecer oportunidades de aprendizagem diferenciadas.",
+          "Adapto frequentemente o meu ensino para o relacionar com necessidades, preferências e interesses dos estudantes."
+        ]
+      },
+      {
+        "titulo": "5.3 Uso tecnologias digitais para os estudantes participarem ativamente nas aulas.",
+        "opcoes": [
+          "No meu contexto de trabalho, não é possível envolver os estudantes ativamente na aula.",
+          "Envolvo ativamente os estudantes na aula, mas não com tecnologias digitais.",
+          "Quando ensino, uso estímulos motivadores.",
+          "Os meus estudantes envolvem-se com mídias digitais nas minhas aulas.",
+          "Os meus estudantes usam tecnologias digitais para investigar, discutir e criar conhecimento."
+        ]
+      }
+    ]
+  },
+  {
+    "titulo": "Promoção da Competência Digital dos Aprendentes",
+    "questoes": [
+      {
+        "titulo": "6.1 Ensino meus estudantes como avaliar a credibilidade da informação.",
+        "opcoes": [
+          "Isso não é possível na minha unidade curricular ou contexto de trabalho.",
+          "Ocasionalmente relembro aos estudantes que nem toda a informação on-line é confiável.",
+          "Ensino aos estudantes como discernir fontes confiáveis.",
+          "Discutimos como verificar a precisão da informação.",
+          "Discutimos amplamente como a informação é criada e pode ser distorcida."
+        ]
+      },
+      {
+        "titulo": "6.2 Incentivo os estudantes a se comunicarem e colaborarem digitalmente.",
+        "opcoes": [
+          "Isso não é possível na minha unidade curricular ou contexto de trabalho.",
+          "Apenas em raras ocasiões exijo aos estudantes que se comuniquem e colaborem on-line.",
+          "Meus estudantes usam comunicação e colaboração digital, sobretudo entre eles.",
+          "Meus estudantes usam meios digitais para se comunicarem e colaborarem com um público externo.",
+          "Preparo, sistematicamente, tarefas que permitem aos estudantes expandirem progressivamente suas competências."
+        ]
+      },
+      {
+        "titulo": "6.3 Os estudantes criam conteúdo digital como parte do seu aprendizado.",
+        "opcoes": [
+          "Isso não é possível na minha unidade curricular ou contexto de trabalho.",
+          "Isso é difícil de implementar com meus estudantes.",
+          "Às vezes, para diversão e motivação.",
+          "Meus estudantes criam conteúdo digital como parte integrante do seu estudo.",
+          "Considero isso como parte integrante da aprendizagem."
+        ]
+      },
+      {
+        "titulo": "6.4 Ensinar sobre segurança e responsabilidade na internet.",
+        "opcoes": [
+          "Isso não é possível na minha unidade curricular ou contexto de trabalho.",
+          "Informo aos estudantes que precisam ter cuidado no compartilhamento de informação pessoal.",
+          "Explico as regras básicas para agir com segurança e responsabilidade.",
+          "Discutimos e acordamos regras de conduta.",
+          "Desenvolvo, sistematicamente, a utilização de regras sociais nos diferentes ambientes digitais."
+        ]
+      },
+      {
+        "titulo": "6.5 Integro oportunidades para a resolução criativa de problemas digitais.",
+        "opcoes": [
+          "Isso não é possível na minha unidade curricular ou contexto de trabalho.",
+          "Raramente tenho a oportunidade de promover a resolução de problemas digitais dos estudantes.",
+          "Ocasionalmente, quando surge uma oportunidade.",
+          "Experimentamos, muitas vezes, soluções tecnológicas para problemas.",
+          "Integro, sistematicamente, oportunidades para resolução criativa de problemas digitais."
+        ]
+      }
+    ]
+  }
+]
