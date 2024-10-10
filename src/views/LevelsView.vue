@@ -8,11 +8,13 @@
           competências digitais dos docentes em:
         </p>
         <div class="row row-levels">
-          <LevelCard v-for="n in niveis" :key="n.titulo" :data="n"/>
+          <LevelCard v-for="n in niveis" :key="n.titulo" :data="n" />
         </div>
         <div class="buttons">
-          <a class="btn btn-outline-primary" href="index.html"> Voltar </a>
-          <a class="btn btn-primary" href="fase.html"> Próximo </a>
+          <router-link to="/" class="btn btn-outline-primary" href="index.html">
+            Voltar
+          </router-link>
+          <router-link to="/1" class="btn btn-primary"> Próximo </router-link>
         </div>
       </div>
     </div>

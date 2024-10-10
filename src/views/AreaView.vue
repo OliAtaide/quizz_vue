@@ -2,24 +2,26 @@
 import AreaQuestao from "@/components/AreaQuestao.vue";
 import axios from "axios";
 import { onMounted, ref, watch } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
+import * as $ from "jquery";
+import { useStore } from "vuex";
 
 const route = useRoute();
+const router = useRouter();
+const store = useStore();
 var id = route.params.id;
 
 const isMounted = ref(false);
+const isComplete = ref(false);
 
 var area = null;
-
 var progress = 0;
-
 var escolhas = [];
 
 function getArea() {
   axios.get("/dict.json").then((response) => {
     area = response.data[id - 1];
     progress = (100 / 6) * parseInt(id);
-    console.log(progress);
     isMounted.value = true;
   });
 }
@@ -32,19 +34,44 @@ watch(
   () => route.params.id,
   (newId) => {
     isMounted.value = false;
+    isComplete.value = false;
+    escolhas = [];
     id = newId;
     getArea();
   }
 );
 
 function submit() {
-  console.log("bruv");
+  var sum = 0;
+  escolhas.forEach((e) => {
+    sum += e;
+  });
+  var index = id - 1;
+  store.commit("setAcertos", { index, sum });
+  $(".main1").hide();
+  $(".main2").show();
 }
 
 const handleSelectedValue = (value, index) => {
+  console.log(value);
   escolhas[index] = value;
-  console.log(escolhas, escolhas.filter(Boolean).length)
+  isComplete.value = currentLength() == area.questoes.length;
 };
+
+var currentLength = () => {
+  return escolhas.filter(
+    (item) => item !== null && item !== undefined && item !== ""
+  ).length;
+};
+
+function next() {
+  if (id < 6) {
+    router.push(`/${parseInt(id) + 1}`);
+  } else {
+    store.commit("fetchAcertos");
+    router.push("/end");
+  }
+}
 </script>
 
 <template>
@@ -63,37 +90,57 @@ const handleSelectedValue = (value, index) => {
             </router-link>
           </li>
         </ul>
-        <div class="fase-header">
-          <h1 class="fase-title">Fase {{ id }}: {{ area.titulo }}</h1>
-          <div
-            class="progress"
-            role="progressbar"
-            aria-label="Basic example"
-            aria-valuenow="0"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <div class="progress-bar" :style="`width: ${progress}%`"></div>
+        <div class="main1">
+          <div class="fase-header">
+            <h1 class="fase-title">Fase {{ id }}: {{ area.titulo }}</h1>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="Basic example"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-bar" :style="`width: ${progress}%`"></div>
+            </div>
+            <img src="@/assets/imgs/07.png" class="img07" alt="" />
           </div>
-          <img src="@/assets/imgs/07.png" class="img07" alt="" />
+          <form @submit.prevent="submit">
+            <div class="perguntas">
+              <AreaQuestao
+                v-for="(q, i) in area.questoes"
+                :key="q.titulo"
+                :data="q"
+                :id="i"
+                @update:selectedValue="handleSelectedValue"
+              />
+            </div>
+            <div class="buttons">
+              <router-link class="btn btn-outline-primary" to="levels">
+                Voltar
+              </router-link>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                :disabled="!isComplete"
+              >
+                Próximo
+              </button>
+            </div>
+          </form>
         </div>
-        <form @submit.prevent="submit">
-          <div class="perguntas">
-            <AreaQuestao
-              v-for="(q, i) in area.questoes"
-              :key="q.titulo"
-              :data="q"
-              :id="i"
-              @update:selectedValue="handleSelectedValue"
-            />
+        <div class="main2" style="display: none">
+          <div class="fase-header">
+            <img src="@/assets/imgs/08.png" class="img08" alt="" />
+            <h1 class="fase-title">Parabéns! Você concluiu a fase {{ id }}!</h1>
           </div>
-          <div class="buttons">
-            <router-link class="btn btn-outline-primary" to="levels">
+          <div class="buttons m-0">
+            <button class="btn btn-outline-primary" href="fase.html">
               Voltar
-            </router-link>
-            <button type="submit" class="btn btn-primary">Próximo</button>
+            </button>
+            <button @click="next()" class="btn btn-primary">Próximo</button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>

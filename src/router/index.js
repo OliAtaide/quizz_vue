@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import LevelsView from "@/views/LevelsView.vue";
 import AreaView from "@/views/AreaView.vue";
+import EndView from "@/views/EndView.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/:id",
     name: "AreaView",
     component: AreaView
+  },
+  {
+    path: "/end",
+    name: "EndView",
+    component: EndView
   }
 ];
 
