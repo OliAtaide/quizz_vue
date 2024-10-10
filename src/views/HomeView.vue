@@ -1,3 +1,28 @@
+<script setup>
+import { computed, ref } from "vue";
+import { useRouter } from "vue-router";
+import { useStore } from "vuex";
+
+const store = useStore();
+const router = useRouter();
+
+const isFilled = ref(false);
+
+const inputValue = computed({
+  get() {
+    return store.state.siape;
+  },
+  set(value) {
+    store.commit("setSiape", value);
+    isFilled.value = value.toString().length >= 8;
+  },
+});
+
+function next() {
+  router.push("/levels");
+}
+</script>
+
 <template>
   <div class="container">
     <div class="card card-main">
@@ -53,9 +78,19 @@
         </div>
       </div>
     </div>
+    <input
+      v-model="inputValue"
+      class="form-control"
+      type="number"
+      placeholder="SIAPE*"
+      aria-label="SIAPE"
+      min="0"
+    />
     <div class="buttons mb-5">
       <a class="btn btn-danger" href="#"> Discordo </a>
-      <router-link to="levels" class="btn btn-success"> Concordo </router-link>
+      <button :disabled="!isFilled" @click="next()" to="levels" class="btn btn-success">
+        Concordo
+      </button>
     </div>
   </div>
 </template>

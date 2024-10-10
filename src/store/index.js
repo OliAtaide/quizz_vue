@@ -15,6 +15,9 @@ export default createStore({
     setAcertos(state, data) {
       state.acertos[data.index] = data.sum;
     },
+    setSiape(state, value) {
+      state.siape = value;
+    },
     fetchAcertos(state) {
       let list = state.acertos;
       let sum = 0;
@@ -32,8 +35,8 @@ export default createStore({
         },
         body: JSON.stringify(
           Object.values({
-            identificacao: "admin",
-            SIAPE: "135790",
+            identificacao: "admin2",
+            SIAPE: state.siape,
             total: sum,
             area1: list[0],
             area2: list[1],
