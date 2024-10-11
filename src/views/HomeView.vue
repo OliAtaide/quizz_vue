@@ -78,9 +78,13 @@ function next() {
         </div>
       </div>
     </div>
+    <label for="siapeInput" class="form-label">
+      Digite a sua matrícula SIAPE:
+    </label>
     <input
       v-model="inputValue"
       class="form-control"
+      id="siapeInput"
       type="number"
       placeholder="SIAPE*"
       aria-label="SIAPE"
