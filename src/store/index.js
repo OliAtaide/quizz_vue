@@ -7,10 +7,15 @@ export default createStore({
     siape: 0,
     acertos: [0, 0, 0, 0, 0, 0],
     avaliacao: [],
+    levels: [],
+    current_level: null,
   },
   mutations: {
     SET_AVALIACAO(state, dados) {
       state.avaliacao = dados;
+    },
+    SET_LEVELS(state, dados) {
+      state.levels = dados;
     },
     setAcertos(state, data) {
       state.acertos[data.index] = data.sum;
@@ -18,7 +23,29 @@ export default createStore({
     setSiape(state, value) {
       state.siape = value;
     },
-    fetchAcertos(state) {
+    SET_CURRENT_LEVEL(state, level) {
+      state.current_level = level;
+    },
+  },
+  actions: {
+    async fetchAvaliacoes({ commit }) {
+      try {
+        const response = await axios.get("/dict.json");
+        commit("SET_AVALIACAO", response.data);
+      } catch (error) {
+        console.error("Erro ao carregar os dados:", error);
+      }
+    },
+    async fetchLevels({ commit }) {
+      try {
+        const response = await axios.get("/levels.json");
+        commit("SET_LEVELS", response.data);
+        console.log(response.data);
+      } catch (error) {
+        console.error("Erro ao carregar os dados:", error);
+      }
+    },
+    async fetchAcertos({ commit, state }) {
       let list = state.acertos;
       let sum = 0;
       const url =
@@ -27,6 +54,20 @@ export default createStore({
       list.forEach((l) => {
         sum += l;
       });
+
+      try {
+        const response = await axios.get("/total.json");
+        response.data.forEach((l) => {
+          const [min, max] = l.pontos;
+          if (sum >= min && (max === undefined || sum <= max)) {
+            commit("SET_CURRENT_LEVEL", l);
+            console.log(l);
+          }
+        });
+      } catch (error) {
+        console.error("Erro ao carregar os dados:", error);
+      }
+
       fetch(url, {
         method: "POST",
         mode: "no-cors",
@@ -35,7 +76,7 @@ export default createStore({
         },
         body: JSON.stringify(
           Object.values({
-            identificacao: "admin2",
+            identificacao: "",
             SIAPE: state.siape,
             total: sum,
             area1: list[0],
@@ -47,29 +88,11 @@ export default createStore({
           })
         ),
       })
-        .then((response) => console.log(response))
+        .then((response) => {
+          console.log(response);
+        })
         .then((data) => console.log("Success:", data))
         .catch((error) => console.error("Error:", error));
-      fetch(url, {
-        method: "GET",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((response) => console.log(response))
-        .then((data) => console.log("Success:", data))
-        .catch((error) => console.error("Error:", error));
-    },
-  },
-  actions: {
-    async fetchAvaliacoes({ commit }) {
-      try {
-        const response = await axios.get("/dict.json");
-        commit("SET_AVALIACAO", response.data);
-      } catch (error) {
-        console.error("Erro ao carregar os dados:", error);
-      }
     },
   },
   getters: {

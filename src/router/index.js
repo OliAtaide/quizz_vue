@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomeView from "@/views/HomeView.vue";
 import LevelsView from "@/views/LevelsView.vue";
 import AreaView from "@/views/AreaView.vue";
 import EndView from "@/views/EndView.vue";
@@ -28,6 +28,7 @@ const routes = [
 ];
 
 const router = createRouter({
+  mode: "history",
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });

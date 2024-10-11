@@ -14,7 +14,7 @@ const inputValue = computed({
   },
   set(value) {
     store.commit("setSiape", value);
-    isFilled.value = value.toString().length >= 8;
+    isFilled.value = value.toString().length >= 1;
   },
 });
 
@@ -88,7 +88,12 @@ function next() {
     />
     <div class="buttons mb-5">
       <a class="btn btn-danger" href="#"> Discordo </a>
-      <button :disabled="!isFilled" @click="next()" to="levels" class="btn btn-success">
+      <button
+        :disabled="!isFilled"
+        @click="next()"
+        to="levels"
+        class="btn btn-success"
+      >
         Concordo
       </button>
     </div>

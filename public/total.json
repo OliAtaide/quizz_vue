@@ -1,0 +1,44 @@
+[
+  {
+    "imagem": "01",
+    "titulo": "Recém-chegados",
+    "texto": "reconhecem o potencial das tecnologias digitais para melhorar a prática pedagógica e profissional e usam-nas majoritariamente para preparação de aulas, administração ou comunicação institucional.",
+    "nome": "A1",
+    "pontos": [1, 19]
+  },
+  {
+    "imagem": "04",
+    "titulo": "Especialistas",
+    "texto": "selecionam tecnologias digitais propositadamente para situações específicas e procuram compreender as vantagens e desvantagens de diferentes estratégias digitais.",
+    "nome": "A2",
+    "pontos": [20, 33]
+  },
+  {
+    "imagem": "02",
+    "titulo": "Exploradores",
+    "texto": "começaram a usar tecnologias digitais em algumas áreas de competência digital, sem, no entanto, seguir uma abordagem abrangente ou consistente.",
+    "nome": "B1",
+    "pontos": [34, 49]
+  },
+  {
+    "imagem": "05",
+    "titulo": "Líderes",
+    "texto": "contam com um amplo repertório de estratégias digitais, do qual sabem escolher a mais adequada para determinada situação.",
+    "nome": "B2",
+    "pontos": [50, 65]
+  },
+  {
+    "imagem": "03",
+    "titulo": "Integradores",
+    "texto": "utilizam as tecnologias digitais de forma criativa para melhorar diversos aspectos do seu envolvimento profissional.",
+    "nome": "C1",
+    "pontos": [66, 80]
+  },
+  {
+    "imagem": "06",
+    "titulo": "Pioneiros",
+    "texto": "preocupam-se com as limitações ou desvantagens dessas práticas e são levados pelo impulso de inovar cada vez mais a Educação.",
+    "nome": "C2",
+    "pontos": [81]
+  }
+]

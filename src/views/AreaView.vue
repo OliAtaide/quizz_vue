@@ -13,12 +13,17 @@ var id = route.params.id;
 
 const isMounted = ref(false);
 const isComplete = ref(false);
+const level = ref("");
 
 var area = null;
+var levels = null;
 var progress = 0;
 var escolhas = [];
 
 function getArea() {
+  axios.get("/levels.json").then((response) => {
+    levels = response.data[id - 1];
+  });
   axios.get("/dict.json").then((response) => {
     area = response.data[id - 1];
     progress = (100 / 6) * parseInt(id);
@@ -48,6 +53,14 @@ function submit() {
   });
   var index = id - 1;
   store.commit("setAcertos", { index, sum });
+
+  levels.forEach((l) => {
+    const [min, max] = l.pontos;
+    if (sum >= min && (max === undefined || sum <= max)) {
+      level.value = l.nome;
+    }
+  });
+
   $(".main1").hide();
   $(".main2").show();
 }
@@ -68,7 +81,7 @@ function next() {
   if (id < 6) {
     router.push(`/${parseInt(id) + 1}`);
   } else {
-    store.commit("fetchAcertos");
+    store.dispatch("fetchAcertos");
     router.push("/end");
   }
 }
@@ -132,7 +145,12 @@ function next() {
         <div class="main2" style="display: none">
           <div class="fase-header">
             <img src="@/assets/imgs/08.png" class="img08" alt="" />
-            <h1 class="fase-title">Parabéns! Você concluiu a fase {{ id }}!</h1>
+            <h1 class="fase-title">
+              Parabéns! Você concluiu a fase {{ id }}!
+            </h1>
+            <h2 class="fase-title mt-3" style="display: none">
+              Nível de Competência Digital: <strong>{{ level }}</strong>
+            </h2>
           </div>
           <div class="buttons m-0">
             <button class="btn btn-outline-primary" href="fase.html">
