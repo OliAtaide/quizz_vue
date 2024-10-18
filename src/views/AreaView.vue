@@ -91,7 +91,7 @@ function next() {
   <div class="container" v-if="isMounted">
     <div class="card card-main">
       <div class="card-body">
-        <p class="subtitle">Fases:</p>
+        <p class="subtitle">Áreas:</p>
         <ul class="nav nav-fases nav-fill" id="myTab">
           <li v-for="i in 6" :key="i" class="nav-item">
             <router-link
@@ -105,7 +105,7 @@ function next() {
         </ul>
         <div class="main1">
           <div class="fase-header">
-            <h1 class="fase-title">Fase {{ id }}: {{ area.titulo }}</h1>
+            <h1 class="fase-title">Área {{ id }}: {{ area.titulo }}</h1>
             <div
               class="progress"
               role="progressbar"
@@ -145,9 +145,7 @@ function next() {
         <div class="main2" style="display: none">
           <div class="fase-header">
             <img src="@/assets/imgs/08.png" class="img08" alt="" />
-            <h1 class="fase-title">
-              Parabéns! Você concluiu a fase {{ id }}!
-            </h1>
+            <h1 class="fase-title">Parabéns! Você concluiu a Área {{ id }}!</h1>
             <h2 class="fase-title mt-3" style="display: none">
               Nível de Competência Digital: <strong>{{ level }}</strong>
             </h2>

@@ -1,42 +1,42 @@
 [
   {
     "imagem": "01",
-    "titulo": "Recém-chegados",
+    "titulo": "Recém-chegados (A1)",
     "texto": "reconhecem o potencial das tecnologias digitais para melhorar a prática pedagógica e profissional e usam-nas majoritariamente para preparação de aulas, administração ou comunicação institucional.",
     "nome": "A1",
     "pontos": [1, 19]
   },
   {
-    "imagem": "04",
-    "titulo": "Especialistas",
-    "texto": "selecionam tecnologias digitais propositadamente para situações específicas e procuram compreender as vantagens e desvantagens de diferentes estratégias digitais.",
+    "imagem": "02",
+    "titulo": "Exploradores (A2)",
+    "texto": "começaram a usar tecnologias digitais em algumas áreas de competência digital, sem, no entanto, seguir uma abordagem abrangente ou consistente.",
     "nome": "A2",
     "pontos": [20, 33]
   },
   {
-    "imagem": "02",
-    "titulo": "Exploradores",
-    "texto": "começaram a usar tecnologias digitais em algumas áreas de competência digital, sem, no entanto, seguir uma abordagem abrangente ou consistente.",
+    "imagem": "03",
+    "titulo": "Integradores (B1)",
+    "texto": "utilizam as tecnologias digitais de forma criativa para melhorar diversos aspectos do seu envolvimento profissional.",
     "nome": "B1",
     "pontos": [34, 49]
   },
   {
-    "imagem": "05",
-    "titulo": "Líderes",
-    "texto": "contam com um amplo repertório de estratégias digitais, do qual sabem escolher a mais adequada para determinada situação.",
+    "imagem": "04",
+    "titulo": "Especialistas (B2)",
+    "texto": "selecionam tecnologias digitais propositadamente para situações específicas e procuram compreender as vantagens e desvantagens de diferentes estratégias digitais.",
     "nome": "B2",
-    "pontos": [50, 65]
-  },
-  {
-    "imagem": "03",
-    "titulo": "Integradores",
-    "texto": "utilizam as tecnologias digitais de forma criativa para melhorar diversos aspectos do seu envolvimento profissional.",
-    "nome": "C1",
     "pontos": [66, 80]
   },
   {
+    "imagem": "05",
+    "titulo": "Líderes (C1)",
+    "texto": "contam com um amplo repertório de estratégias digitais, do qual sabem escolher a mais adequada para determinada situação.",
+    "nome": "C1",
+    "pontos": [50, 65]
+  },
+  {
     "imagem": "06",
-    "titulo": "Pioneiros",
+    "titulo": "Pioneiros (C2)",
     "texto": "preocupam-se com as limitações ou desvantagens dessas práticas e são levados pelo impulso de inovar cada vez mais a Educação.",
     "nome": "C2",
     "pontos": [81]
