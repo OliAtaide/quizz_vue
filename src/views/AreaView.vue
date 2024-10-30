@@ -22,10 +22,10 @@ var progress = 0;
 var escolhas = [];
 
 function getArea() {
-  axios.get("/levels.json").then((response) => {
+  axios.get("levels.json").then((response) => {
     levels = response.data[ix];
   });
-  axios.get("/dict.json").then((response) => {
+  axios.get("dict.json").then((response) => {
     area = response.data[ix];
     progress = (100 / 6) * parseInt(ix);
     isMounted.value = true;
@@ -84,7 +84,7 @@ function next() {
     router.push(`/${parseInt(id) + 1}`);
   } else {
     store.dispatch("fetchAcertos");
-    router.push("/end");
+    router.push("end");
   }
 }
 </script>
