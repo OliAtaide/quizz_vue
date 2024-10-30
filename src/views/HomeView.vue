@@ -19,7 +19,7 @@ const inputValue = computed({
 });
 
 function next() {
-  router.push("/levels");
+  router.push("levels");
 }
 </script>
 
@@ -114,7 +114,7 @@ function next() {
       <button
         :disabled="!isFilled"
         @click="next()"
-        to="levels"
+        to="/levels"
         class="btn btn-success"
       >
         Concordo

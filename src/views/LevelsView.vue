@@ -33,10 +33,10 @@ onMounted(() => {
           </div>
         </div>
         <div class="buttons">
-          <router-link to="./" class="btn btn-outline-primary" href="index.html">
+          <router-link to="/" class="btn btn-outline-primary" href="index.html">
             Voltar
           </router-link>
-          <router-link to="1" class="btn btn-primary"> Próximo </router-link>
+          <router-link to="/1" class="btn btn-primary"> Próximo </router-link>
         </div>
       </div>
     </div>

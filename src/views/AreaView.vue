@@ -131,7 +131,7 @@ function next() {
               />
             </div>
             <div class="buttons">
-              <router-link class="btn btn-outline-primary" to="levels">
+              <router-link class="btn btn-outline-primary" to="/levels">
                 Voltar
               </router-link>
               <button
