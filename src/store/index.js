@@ -30,7 +30,7 @@ export default createStore({
   actions: {
     async fetchAvaliacoes({ commit }) {
       try {
-        const response = await axios.get(dict.json");
+        const response = await axios.get("dict.json");
         commit("SET_AVALIACAO", response.data);
       } catch (error) {
         console.error("Erro ao carregar os dados:", error);
