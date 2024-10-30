@@ -7,27 +7,27 @@ import ResultFile from "@/views/ResultFile.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "",
     name: "home",
     component: HomeView,
   },
   {
-    path: "/levels",
+    path: "levels",
     name: "levels",
     component: LevelsView,
   },
   {
-    path: "/:id",
+    path: ":id",
     name: "AreaView",
     component: AreaView
   },
   {
-    path: "/end",
+    path: "end",
     name: "EndView",
     component: EndView
   },
   {
-    path: "/result",
+    path: "result",
     name: "Result",
     component: ResultFile
   }

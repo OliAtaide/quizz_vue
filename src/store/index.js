@@ -30,7 +30,7 @@ export default createStore({
   actions: {
     async fetchAvaliacoes({ commit }) {
       try {
-        const response = await axios.get("/dict.json");
+        const response = await axios.get(dict.json");
         commit("SET_AVALIACAO", response.data);
       } catch (error) {
         console.error("Erro ao carregar os dados:", error);
@@ -38,7 +38,7 @@ export default createStore({
     },
     async fetchLevels({ commit }) {
       try {
-        const response = await axios.get("/levels.json");
+        const response = await axios.get("levels.json");
         commit("SET_LEVELS", response.data);
         console.log(response.data);
       } catch (error) {
@@ -56,7 +56,7 @@ export default createStore({
       });
 
       try {
-        const response = await axios.get("/total.json");
+        const response = await axios.get("total.json");
         response.data.forEach((l) => {
           const [min, max] = l.pontos;
           if (sum >= min && (max === undefined || sum <= max)) {
