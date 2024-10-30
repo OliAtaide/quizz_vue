@@ -3,6 +3,7 @@ import HomeView from "@/views/HomeView.vue";
 import LevelsView from "@/views/LevelsView.vue";
 import AreaView from "@/views/AreaView.vue";
 import EndView from "@/views/EndView.vue";
+import ResultFile from "@/views/ResultFile.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/end",
     name: "EndView",
     component: EndView
+  },
+  {
+    path: "/result",
+    name: "Result",
+    component: ResultFile
   }
 ];
 

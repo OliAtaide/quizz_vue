@@ -10,6 +10,7 @@ const route = useRoute();
 const router = useRouter();
 const store = useStore();
 var id = route.params.id;
+var ix = id - 1;
 
 const isMounted = ref(false);
 const isComplete = ref(false);
@@ -22,11 +23,11 @@ var escolhas = [];
 
 function getArea() {
   axios.get("/levels.json").then((response) => {
-    levels = response.data[id - 1];
+    levels = response.data[ix];
   });
   axios.get("/dict.json").then((response) => {
-    area = response.data[id - 1];
-    progress = (100 / 6) * parseInt(id);
+    area = response.data[ix];
+    progress = (100 / 6) * parseInt(ix);
     isMounted.value = true;
   });
 }
@@ -42,6 +43,7 @@ watch(
     isComplete.value = false;
     escolhas = [];
     id = newId;
+    ix = newId - 1;
     getArea();
   }
 );
@@ -51,7 +53,7 @@ function submit() {
   escolhas.forEach((e) => {
     sum += e;
   });
-  var index = id - 1;
+  var index = ix;
   store.commit("setAcertos", { index, sum });
 
   levels.forEach((l) => {
