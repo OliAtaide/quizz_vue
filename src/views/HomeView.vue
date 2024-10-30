@@ -19,7 +19,7 @@ const inputValue = computed({
 });
 
 function next() {
-  router.push("levels");
+  router.push("/levels");
 }
 </script>
 

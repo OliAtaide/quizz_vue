@@ -84,7 +84,7 @@ function next() {
     router.push(`/${parseInt(id) + 1}`);
   } else {
     store.dispatch("fetchAcertos");
-    router.push("end");
+    router.push("/end");
   }
 }
 </script>
