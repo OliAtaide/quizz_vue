@@ -4,7 +4,9 @@
       <div class="card-body">
         <div class="fase-header">
           <img src="@/assets/imgs/09.png" class="img09 w-25" alt="" />
-          <h3 class="fase-title">Parabéns! instrumento! Sua classificação:</h3>
+          <h3 class="fase-title">
+            Parabéns! Você concluiu o seu autodiagnostico!
+          </h3>
           <LevelCard v-if="isTotal" :data="data" />
           <h3>
             Obrigado por sua contribuição. Você pode imprimir seu relatório
@@ -18,7 +20,7 @@
             >
               Voltar
             </router-link>
-            <a class="btn btn-primary" href="#"> Finalizar </a>
+            <router-link class="btn btn-primary" to="/result"> Imprimir </router-link>
           </div>
         </div>
       </div>

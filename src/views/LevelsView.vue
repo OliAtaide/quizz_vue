@@ -1,7 +1,10 @@
 <script setup>
 import LevelCard from "@/components/LevelCard.vue";
 import axios from "axios";
+import * as $ from "jquery";
 import { onMounted, ref } from "vue";
+import { useStore } from "vuex";
+const store = useStore();
 
 const isMounted = ref(false);
 
@@ -17,6 +20,12 @@ function getArea() {
 onMounted(() => {
   getArea();
 });
+
+function selectLevel(n, i) {
+  store.commit("setAutodiag", niveis[i].nome);
+  $(".card-level").removeClass("card-level-active");
+  $(".card-level-" + i).addClass("card-level-active");
+}
 </script>
 <template>
   <div class="container" v-if="isMounted">
@@ -28,8 +37,8 @@ onMounted(() => {
           competências digitais dos docentes em:
         </p>
         <div class="row row-levels">
-          <div class="col-sm-6" v-for="n in niveis" :key="n.titulo" >
-            <LevelCard :data="n" />
+          <div class="col-sm-6" v-for="(n, i) in niveis" :key="n.titulo">
+            <LevelCard :data="n" :index="i" @click="selectLevel(n, i)" />
           </div>
         </div>
         <div class="buttons">

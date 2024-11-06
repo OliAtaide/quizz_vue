@@ -5,6 +5,7 @@ export default createStore({
   state: {
     identificacao: "",
     siape: 0,
+    autodiag: "",
     acertos: [0, 0, 0, 0, 0, 0],
     avaliacao: [],
     levels: [],
@@ -22,6 +23,9 @@ export default createStore({
     },
     setSiape(state, value) {
       state.siape = value;
+    },
+    setAutodiag(state, autodiag) {
+      state.autodiag = autodiag;
     },
     SET_CURRENT_LEVEL(state, level) {
       state.current_level = level;
@@ -48,6 +52,7 @@ export default createStore({
     async fetchAcertos({ commit, state }) {
       let list = state.acertos;
       let sum = 0;
+      let auto = state.autodiag;
       const url =
         "https://script.google.com/macros/s/AKfycbzvDpIMseqqj6kADm-cMbFqCeat6ykQSYvqYOG-ILKlG_mZmcBGS8fBpw1105YRcPEWYg/exec";
 
@@ -78,13 +83,14 @@ export default createStore({
           Object.values({
             identificacao: "",
             SIAPE: state.siape,
-            total: sum,
+            autodiagnostico: auto,
             area1: list[0],
             area2: list[1],
             area3: list[2],
             area4: list[3],
             area5: list[4],
             area6: list[5],
+            total: sum,
           })
         ),
       })

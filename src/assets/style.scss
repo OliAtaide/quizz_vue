@@ -264,3 +264,8 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+.card-level-active {
+    border: 2px solid var(--primary) !important;
+    background: linear-gradient(to right, white 50%, var(--primary-light));
+}

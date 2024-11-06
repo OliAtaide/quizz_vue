@@ -1,47 +1,65 @@
 <script setup>
+import axios from "axios";
 import * as $ from "jquery";
+import { ref, watch } from "vue";
+import { useStore } from "vuex";
+const store = useStore();
 
-//print($('.result'));
+const acertos = store.state.acertos;
+
+const isMounted = ref(false);
+
+var titles = [];
+
+var total = [16, 12, 16, 12, 12, 20];
+
+function getAreas() {
+  axios.get("dict.json").then((response) => {
+    let data = response.data;
+
+    data.forEach((d) => {
+      titles.push(d.titulo);
+    });
+
+    console.log(titles, total);
+    isMounted.value = true;
+  });
+}
+
+getAreas();
+
+watch(
+  () => isMounted.value,
+  () => {
+    print($(".result"));
+  }
+);
 </script>
 
 <template>
-  <div class="result">
-    <h3 class="text-center">
-      DigCompEdu Check-In Brasil MetaRed - Resultados
-    </h3>
+  <div class="result" v-if="isMounted">
+    <h3 class="text-center">DigCompEdu Check-In Brasil MetaRed - Resultados</h3>
+    <h6>Obrigado por sua contribuição!</h6>
+    <h6>Segue abaixo o quadro com as pontuações:</h6>
     <table class="table table-bordered">
-      <tr>
-        <th>Área</th>
-        <th>Pontuação</th>
-      </tr>
-      <tr>
-        <th>Área 1: Envolvimento profissional</th>
-        <td>0/16</td>
-      </tr>
-      <tr>
-        <th>Área 2: Tecnologias Digitais</th>
-        <td>1/12</td>
-      </tr>
-      <tr>
-        <th>Área 3: Ensino e Aprendizagem</th>
-        <td>7/16</td>
-      </tr>
-      <tr>
-        <th>Área 4: Avaliação</th>
-        <td>3/12</td>
-      </tr>
-      <tr>
-        <th>Área 5: Capacitação dos estudantes</th>
-        <td>8/12</td>
-      </tr>
-      <tr>
-        <th>Área 6: Promoção da competência digital dos estudantes</th>
-        <td>15/20</td>
-      </tr>
-      <tr>
-        <th>Pontuação total</th>
-        <td>34/88</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Área</th>
+          <th>Pontuação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(d, i) in acertos" :key="d">
+          <th>Área {{ i + 1 }}: {{ titles[i] }}</th>
+          <th>{{ d }} / {{ total[i] }}</th>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Pontuação total</th>
+          <th>{{ acertos.reduce((a, b) => a + b, 0) }} / 88</th>
+        </tr>
+      </tfoot>
     </table>
 
     <h6>Se a sua pontuação está abaixo de 20 é um(a) Recém-chegado(a) (A1)</h6>
@@ -120,139 +138,8 @@ import * as $ from "jquery";
     <p>
       Para compreender melhor o seu perfil de competência, deve olhar para o seu
       desempenho por área. Devido ao número limitado de questões utilizadas
-      ​​nesta ferramenta, não é possível calcular uma pontuação fiável por área.
-      No entanto, para lhe dar uma ideia que o(a) pode ajudar a determinar os
-      seus pontos fortes e fracos, aplica-se a seguinte regra geral:
+      ​​nessa ferramenta, não é possível calcular uma pontuação fiável por área.
     </p>
-
-    <h6>Nas Áreas 1 e 3:</h6>
-    <ul>
-      <li>Recém-chegado(a) (A1): 4 pontos;</li>
-      <li>Explorador(a) (A2): 5-7 pontos;</li>
-      <li>Integrador(a) (B1): 8-10 pontos;</li>
-      <li>Especialista (B2): 11-13 pontos;</li>
-      <li>Líder (C1): 14-15 pontos;</li>
-      <li>Pioneiro(a) (C2): 16 pontos</li>
-    </ul>
-
-    <h6>Nas Áreas 2, 4 e 5:</h6>
-    <ul>
-      <li>Recém-chegado(a) (A1): 3 pontos;</li>
-      <li>Explorador(a) (A2): 4-5 pontos;</li>
-      <li>Integrador(a) (B1): 6-7 pontos;</li>
-      <li>Especialista (B2): 8-9 pontos;</li>
-      <li>Líder (C1): 10-11 pontos;</li>
-      <li>Pioneiro(a) (C2): 12 pontos</li>
-    </ul>
-
-    <h6>Na Área 6:</h6>
-    <ul>
-      <li>Recém-chegado(a) (A1): 5-6 pontos;</li>
-      <li>Explorador(a) (A2): 7-8 pontos;</li>
-      <li>Integrador(a) (B1): 9-12 pontos;</li>
-      <li>Especialista (B2): 13-16 pontos;</li>
-      <li>Líder (C1): 17-19 pontos;</li>
-      <li>Pioneiro(a) (C2): 20 pontos</li>
-    </ul>
-
-    <div class="text-center">
-      <h3>Você é um(a) Integrador(a) (B1)</h3>
-      <p>
-        Isto significa: experimenta tecnologias digitais numa variedade de
-        contextos e para uma série de propósitos, integrando-as em muitas das
-        suas práticas. Utiliza-as criativamente para melhorar diversos aspectos
-        do seu envolvimento profissional e está disposto(a) a expandir o seu
-        repertório de práticas. Beneficiará se melhorar a compreensão sobre que
-        ferramentas funcionam melhor em que situações e sobre a adequação de
-        tecnologias digitais a métodos e estratégias pedagógicas. Tente dar a si
-        mesmo(a) mais algum tempo para experimentar e refletir, complementando-o
-        com incentivo colaborativo e troca de conhecimento para chegar ao
-        próximo nível, o de Especialista (B2).
-      </p>
-    </div>
-    <h5>Cálculo das pontuações</h5>
-    <h6>
-      Para cada resposta das 22 perguntas:
-      <ul>
-        <li>letra a vale 0 pontos,</li>
-        <li>letra b vale 1 ponto,</li>
-        <li>letra c vale 2 pontos,</li>
-        <li>letra d vale 3 pontos,</li>
-        <li>letra e vale 4 pontos.</li>
-      </ul>
-    </h6>
-
-    <h3>Nível de competência digital</h3>
-    <table class="table table-bordered">
-      <tr>
-        <th>Nível</th>
-        <th>Pontuação</th>
-      </tr>
-      <tr>
-        <td>A1 – Recém-chegados</td>
-        <td>&lt; 20</td>
-      </tr>
-      <tr>
-        <td>A2 – Exploradores</td>
-        <td>20 até 33</td>
-      </tr>
-      <tr>
-        <td>B1 – Integradores</td>
-        <td>34 até 49</td>
-      </tr>
-      <tr>
-        <td>B2 – Especialistas</td>
-        <td>50 até 65</td>
-      </tr>
-      <tr>
-        <td>C1 – Líderes</td>
-        <td>66 até 80</td>
-      </tr>
-      <tr>
-        <td>C2 – Pioneiros</td>
-        <td>> 80</td>
-      </tr>
-    </table>
-
-    <h3>Áreas e Níveis</h3>
-    <table class="table table-bordered">
-      <tr>
-        <th>Área</th>
-        <th>Nível</th>
-        <th>Pontuação</th>
-      </tr>
-      <tr>
-        <td>Área 1</td>
-        <td>A1</td>
-        <td>1 a 4</td>
-      </tr>
-      <tr>
-        <td>Área 2</td>
-        <td>A1</td>
-        <td>1 a 3</td>
-      </tr>
-      <tr>
-        <td>Área 3</td>
-        <td>A1</td>
-        <td>1 a 4</td>
-      </tr>
-      <tr>
-        <td>Área 4</td>
-        <td>A1</td>
-        <td>1 a 3</td>
-      </tr>
-      <tr>
-        <td>Área 5</td>
-        <td>A1</td>
-        <td>1 a 3</td>
-      </tr>
-      <tr>
-        <td>Área 6</td>
-        <td>A1</td>
-        <td>1 a 6</td>
-      </tr>
-      <!-- Continue as demais áreas conforme necessário -->
-    </table>
   </div>
 </template>
 
@@ -263,5 +150,10 @@ h5,
 h6,
 th {
   font-weight: bold !important;
+}
+
+th,
+td {
+  padding: 0.5em;
 }
 </style>

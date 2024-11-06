@@ -31,18 +31,20 @@ function next() {
           <p>
             Este instrumento foi elaborado a partir do projeto de pesquisa
             cadastrado na UFRN, coordenado pela Professora Maria Carmem Freire
-            Diógenes Rego, denominado "Investigação de competências digitais
-            para o ensino e o desenvolvimento de recursos e tecnologias
-            educacionais para formação de servidores da UFRN" que tem como
-            objetivo realizar pesquisas que possibilitem a investigação de
-            competências e habilidades dirigidas ao ensino, bem como o
-            desenvolvimento de recursos e tecnologias educacionais a serem
-            empregados nos processos formativos dos servidores da UFRN, tomando
-            como pressuposto a perspectiva de formação sustentada pelos
+            Diógenes Rêgo, denominado
+            <strong>
+              “Investigação de competências digitais para o ensino e o
+              desenvolvimento de recursos e tecnologias educacionais para
+              formação de servidores da UFRN”
+            </strong>
+            que tem como objetivo realizar pesquisas que possibilitem a
+            investigação de competências e habilidades dirigidas ao ensino, bem
+            como o desenvolvimento de recursos e tecnologias educacionais a
+            serem empregados nos processos formativos dos servidores da UFRN,
+            tomando como pressuposto a perspectiva de formação sustentada pelos
             princípios da inovação e da colaboração. Utiliza como base o
-            instrumento DigCompEdu, descrito a seguir:
+            instrumento DigCompEdu descrito a seguir:
           </p>
-
           <h6>Sobre o DigCompEdu</h6>
           <p>
             O DigCompEdu Check-In é uma ferramenta de autorreflexão desenvolvida
@@ -93,7 +95,10 @@ function next() {
             Ao final do questionário você receberá sua pontuação e a definição
             de seu nível de competência baseado neste framework.
           </p>
-          <p>Quaisquer dúvidas estaremos a disposição no email: xxx</p>
+          <p>
+            Quaisquer dúvidas estaremos a disposição no email:
+            contato.pesquisa@sedis.ufrn.br.
+          </p>
         </div>
       </div>
     </div>

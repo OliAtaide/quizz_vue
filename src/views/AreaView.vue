@@ -107,7 +107,7 @@ function next() {
         </ul>
         <div class="main1">
           <div class="fase-header">
-            <h1 class="fase-title">Área {{ id }}: {{ area.titulo }}</h1>
+            <h2 class="fase-title">Área {{ id }}: {{ area.titulo }}</h2>
             <div
               class="progress"
               role="progressbar"
@@ -119,6 +119,17 @@ function next() {
               <div class="progress-bar" :style="`width: ${progress}%`"></div>
             </div>
             <img src="@/assets/imgs/07.png" class="img07" alt="" />
+            <p>
+              <i>
+                Por favor, responda considerando os seguintes objetivos de longo
+                prazo.
+              </i>
+            </p>
+            <p>
+              As opções de resposta estão organizadas de acordo com o nível de
+              envolvimento com as tecnologias digitais. Escolha a opção que
+              melhor reflete sua prática atual.
+            </p>
           </div>
           <form @submit.prevent="submit">
             <div class="perguntas">
