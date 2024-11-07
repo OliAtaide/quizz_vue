@@ -42,7 +42,7 @@ watch(
             const pdf = new jsPDF();
 
             pdf.addImage(imgData, "PNG", 10, 10, 190, 0);
-            // pdf.save("gerado.pdf");
+            pdf.save("gerado.pdf");
           })
           .catch((error) => {
             console.error("Error rendering canvas:", error);
