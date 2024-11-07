@@ -176,8 +176,7 @@ td {
   padding: 0.5em;
 }
 
-table{
-  
+table {
   border-color: black;
 }
 </style>
