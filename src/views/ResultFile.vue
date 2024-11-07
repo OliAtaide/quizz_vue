@@ -1,8 +1,10 @@
 <script setup>
 import axios from "axios";
-import * as $ from "jquery";
-import { ref, watch } from "vue";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import { ref, useTemplateRef, watch } from "vue";
 import { useStore } from "vuex";
+
 const store = useStore();
 
 const acertos = store.state.acertos;
@@ -21,7 +23,6 @@ function getAreas() {
       titles.push(d.titulo);
     });
 
-    console.log(titles, total);
     isMounted.value = true;
   });
 }
@@ -31,17 +32,35 @@ getAreas();
 watch(
   () => isMounted.value,
   () => {
-    print($(".result"));
+    setTimeout(() => {
+      const content = document.querySelector("#result");
+      if (content) {
+        html2canvas(content)
+          .then((canvas) => {
+            const imgData = canvas.toDataURL("image/png");
+
+            const pdf = new jsPDF();
+
+            pdf.addImage(imgData, "PNG", 10, 10, 190, 0);
+            // pdf.save("gerado.pdf");
+          })
+          .catch((error) => {
+            console.error("Error rendering canvas:", error);
+          });
+      } else {
+        console.error("Element #result not found");
+      }
+    }, 100); // Delay of 100ms to ensure the DOM updates
   }
 );
 </script>
 
 <template>
-  <div class="result" v-if="isMounted">
+  <div id="result" class="result" ref="result" v-if="isMounted">
     <h3 class="text-center">DigCompEdu Check-In Brasil MetaRed - Resultados</h3>
     <h6>Obrigado por sua contribuição!</h6>
     <h6>Segue abaixo o quadro com as pontuações:</h6>
-    <table class="table table-bordered">
+    <table class="table table-bordered my-3">
       <thead>
         <tr>
           <th>Área</th>
@@ -155,5 +174,10 @@ th {
 th,
 td {
   padding: 0.5em;
+}
+
+table{
+  
+  border-color: black;
 }
 </style>
