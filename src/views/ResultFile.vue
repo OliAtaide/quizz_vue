@@ -155,9 +155,14 @@ watch(
       pedagógicas. Lidera a inovação e é um exemplo para outros docentes.
     </p>
     <p>
-      Para compreender melhor o seu perfil de competência, deve olhar para o seu
-      desempenho por área. Devido ao número limitado de questões utilizadas
-      ​​nessa ferramenta, não é possível calcular uma pontuação fiável por área.
+      Caro(a) Docentes, Para compreender melhor o seu perfil de competência
+      digital é necessário olhar para seu desempenho por área.
+    </p>
+    <p>
+      Devido ao número limitado de questões utilizadas nesta ferramenta, não é
+      possível calcular, neste momento, uma pontuação viável por área. Ao
+      termino da analise dos dados, a equipe de pesquisa apresentará um
+      relatório mais detalhado sobre isso e te será fornecido mais informações.
     </p>
   </div>
 </template>

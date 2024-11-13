@@ -118,7 +118,7 @@ function next() {
             >
               <div class="progress-bar" :style="`width: ${progress}%`"></div>
             </div>
-            <img src="@/assets/imgs/07.png" class="img07" alt="" />
+            <img :src="require(`@/assets/imgs/area${id}.png`)" class="img07" alt="" />
             <p>
               <i>
                 Por favor, responda considerando os seguintes objetivos de longo

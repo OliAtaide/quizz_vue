@@ -52,8 +52,9 @@ function next() {
           Como você avalia atualmente sua competência digital?
         </h5>
         <p>
-          Atribua um nível de A1 a C2, sendo que A1 é o nível mais baixo e C2 o
-          mais avançado. Clique em um dos níveis acima.
+          Atribua um nível de A1 a C2, sendo que A1 é o nível inicial e C2 o
+          mais avançado. Volte para o inicio da tela e Clique em um dos níveis
+          que corresponde ao se estado atual.
         </p>
         <div class="buttons">
           <router-link to="/" class="btn btn-outline-primary" href="index.html">

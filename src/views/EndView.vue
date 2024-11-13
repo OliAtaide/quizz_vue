@@ -5,13 +5,14 @@
         <div class="fase-header">
           <img src="@/assets/imgs/09.png" class="img09 w-25" alt="" />
           <h3 class="fase-title">
-            Parabéns! Você concluiu o seu autodiagnostico!
+            Parabéns! Você concluiu o seu autodiagnostico! Seu Nível de
+            proficiência é:
           </h3>
           <LevelCard v-if="isTotal" :data="data" />
-          <h3>
+          <h5 class="mt-3">
             Obrigado por sua contribuição. Você pode imprimir seu relatório
             pressionando o botão "Imprimir".
-          </h3>
+          </h5>
           <div class="buttons">
             <router-link
               to="/6"
@@ -20,7 +21,9 @@
             >
               Voltar
             </router-link>
-            <router-link class="btn btn-primary" to="/result"> Imprimir </router-link>
+            <router-link class="btn btn-primary" to="/result">
+              Imprimir
+            </router-link>
           </div>
         </div>
       </div>

@@ -29,9 +29,9 @@ function next() {
       <div class="card-body">
         <div class="card-text">
           <p>
-            Este instrumento foi elaborado a partir do projeto de pesquisa
-            cadastrado na UFRN, coordenado pela Professora Maria Carmem F.D.
-            Rêgo, denominado
+            Caro(a) Docente, este instrumento foi elaborado a partir do projeto
+            de pesquisa cadastrado na UFRN, coordenado pela Professora Maria
+            Carmem F.D. Rêgo, denominado
             <strong>
               “Investigação de competências digitais para o ensino e o
               desenvolvimento de recursos e tecnologias educacionais para
@@ -98,8 +98,8 @@ function next() {
           <p>
             Quaisquer dúvidas estaremos a disposição no email:
             <a href="mailto:contato.pesquisa@sedis.ufrn.br">
-              contato.pesquisa@sedis.ufrn.br
-            </a>.
+              contato.pesquisa@sedis.ufrn.br </a
+            >.
           </p>
         </div>
       </div>
