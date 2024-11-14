@@ -9,6 +9,8 @@
             proficiência é:
           </h3>
           <LevelCard v-if="isTotal" :data="data" />
+          <h4 class="fase-title">Seu Nível selecionado anteriormente:</h4>
+          <LevelCard :data="selected" />
           <h5 class="mt-3">
             Caro (a) Docente, obrigado por sua contribuição na pesquisa.
           </h5>
@@ -41,11 +43,11 @@ import { useStore } from "vuex";
 
 const store = useStore();
 
-const total = store.state.current_level;
-
 const isTotal = ref(false);
 
 var data = null;
+
+const selected = store.state.autodiag;
 
 watch(
   () => store.state.current_level,

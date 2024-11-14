@@ -24,7 +24,7 @@ onMounted(() => {
 });
 
 function selectLevel(n, i) {
-  store.commit("setAutodiag", niveis[i].nome);
+  store.commit("setAutodiag", niveis[i]);
   isFilled.value = true;
   $(".card-level").removeClass("card-level-active");
   $(".card-level-" + i).addClass("card-level-active");
