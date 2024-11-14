@@ -161,9 +161,13 @@ watch(
     <p>
       Observação: Devido ao número limitado de questões utilizadas nesta
       ferramenta, não é possível calcular, neste momento, uma pontuação viável
-      por área. Ao termino da analise dos dados, a equipe de pesquisa
-      apresentará um relatório mais detalhado sobre isso e te será fornecido
-      mais informações.
+      por área de competências. Ao término da análise dos dados, a equipe
+      responsável pela pesquisa apresentará de forma pública um relatório geral
+      sobre o nível de competências digitais dos docentes da UFRN e fornecerá
+      aos interessados um relatório individualizado através do email de
+      <a href="mailto:contato.pesquisa@sedis.ufrn.br">
+        contato.pesquisa@sedis.ufrn.br
+      </a>.
     </p>
   </div>
 </template>
