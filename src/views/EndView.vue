@@ -10,8 +10,11 @@
           </h3>
           <LevelCard v-if="isTotal" :data="data" />
           <h5 class="mt-3">
-            Obrigado por sua contribuição. Você pode imprimir seu relatório
-            pressionando o botão "Imprimir".
+            Caro (a) Docente, obrigado por sua contribuição na pesquisa.
+          </h5>
+          <h5>
+            Caso, queira ter mais detalhes sobre o relatório de seu
+            autodiagnostico, pressione o botão "Imprimir" a seguir.
           </h5>
           <div class="buttons">
             <router-link

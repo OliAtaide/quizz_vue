@@ -159,10 +159,11 @@ watch(
       digital é necessário olhar para seu desempenho por área.
     </p>
     <p>
-      Devido ao número limitado de questões utilizadas nesta ferramenta, não é
-      possível calcular, neste momento, uma pontuação viável por área. Ao
-      termino da analise dos dados, a equipe de pesquisa apresentará um
-      relatório mais detalhado sobre isso e te será fornecido mais informações.
+      Observação: Devido ao número limitado de questões utilizadas nesta
+      ferramenta, não é possível calcular, neste momento, uma pontuação viável
+      por área. Ao termino da analise dos dados, a equipe de pesquisa
+      apresentará um relatório mais detalhado sobre isso e te será fornecido
+      mais informações.
     </p>
   </div>
 </template>
