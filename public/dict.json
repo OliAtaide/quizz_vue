@@ -1,6 +1,7 @@
 [
   {
     "titulo": "Envolvimento Profissional",
+    "texto": "A competência digital dos docentes é expressa pela sua capacidade de usar tecnologias digitais, não somente para melhorar o ensino, mas também para aprimorar as interações profissionais com colegas, estudantes e outras partes interessadas. É expressa também pela capacidade de uso para o seu desenvolvimento profissional individual, para o bem coletivo e inovação contínua na instituição e na profissão docente. Este é o foco da Área 1.",
     "questoes": [
       {
         "titulo": "1.1 Há algumas possibilidades de canais para melhorar a comunicação com estudantes e colegas.",
@@ -46,6 +47,7 @@
   },
   {
     "titulo": "Recursos Digitais",
+    "texto": "Uma das principais competências que qualquer docente precisa desenvolver é identificar bons recursos educacionais e poder modificá-los, criar e compartilhar recursos digitais que estejam de acordo com os seus objetivos de aprendizagem, grupo de estudantes e estilo de ensino. Ao mesmo tempo, os professores precisam estar cientes de como utilizar e gerir o conteúdo digital de forma responsável, respeitando os direitos autorais e protegendo os conteúdos e dados pessoais/confidenciais. Estas questões são o foco da Área 2.",
     "questoes": [
       {
         "titulo": "2.1 Uso diferentes sites e estratégias de pesquisa para encontrar e selecionar recursos digitais.",
@@ -81,6 +83,7 @@
   },
   {
     "titulo": "Ensino E Aprendizagem",
+    "texto": "A competência fundamental do Quadro DigCompEdu é a concepção, planejamento e implementação da utilização de tecnologias digitais em diferentes fases do processo de ensino e aprendizagem. No entanto, ao fazer isto, o objetivo tem de ser a mudança de foco da aula: de processos dirigidos pelo docente para processos centrados no estudante. Este é o verdadeiro poder das tecnologias digitais e o foco da Área 3.",
     "questoes": [
       {
         "titulo": "3.1 Pondero como, quando e por que usar tecnologias digitais na aula.",
@@ -113,7 +116,7 @@
         ]
       },
       {
-        "titulo": "3.4 Uso tecnologias digitais para permitir que os estudantes planifiquem.",
+        "titulo": "3.4 Uso tecnologias digitais para permitir que os estudantes planejem.",
         "opcoes": [
           "Não é possível no meu contexto de trabalho.",
           "Meus estudantes refletem sobre sua aprendizagem, mas não com tecnologias digitais.",
@@ -126,6 +129,7 @@
   },
   {
     "titulo": "Avaliação",
+    "texto": "As tecnologias digitais podem melhorar as estratégias de avaliação existentes e originar novos métodos de avaliação. Além disso, ao analisar a riqueza de dados (digitais) disponíveis sobre as (inter)ações individuais dos estudantes, os docentes podem oferecer feedback e apoio mais direcionado. A Área 4 aborda esta mudança nas estratégias de avaliação.",
     "questoes": [
       {
         "titulo": "4.1 Uso ferramentas de avaliação digital para monitorizar o progresso dos estudantes.",
@@ -161,6 +165,7 @@
   },
   {
     "titulo": "Capacitação dos Aprendentes",
+    "texto": "Um dos pontos fortes das tecnologias digitais na educação é seu potencial para impulsionar o envolvimento ativo dos estudantes no processo de aprendizagem e apropriação desse processo. Além disso, as tecnologias digitais podem ser utilizadas para proporcionar atividades adaptadas de aprendizagem ao nível de competência do estudante, aos seus interesses e necessidades de aprendizagem. Ao mesmo tempo, no entanto, se deve ter cuidado para não exacerbar desigualdades existentes (por exemplo: \"acesso a tecnologias digitais\") e garantir acessibilidade para todos os estudantes, incluindo, portanto, aqueles que são público-alvo da educação especial. A área 5 aborda estes problemas.",
     "questoes": [
       {
         "titulo": "5.1 Quando crio tarefas digitais, considero potenciais dificuldades práticas ou técnicas.",
@@ -196,6 +201,7 @@
   },
   {
     "titulo": "Promoção da Competência Digital dos Aprendentes",
+    "texto": "A capacidade para promover a competência digital dos estudantes é uma parte integrante da competência digital dos docentes e está no centro da Área 6.",
     "questoes": [
       {
         "titulo": "6.1 Ensino meus estudantes como avaliar a credibilidade da informação.",
