@@ -47,10 +47,15 @@ function next() {
           </p>
           <h6>Sobre o DigCompEdu</h6>
           <p>
-            O DigCompEdu Check-In é uma ferramenta de autorreflexão desenvolvida
-            pelo Joint Research Centre (JRC) da Comissão Europeia, em Sevilha,
-            em colaboração com Margarida Lucas, do CIDTFF - Universidade de
-            Aveiro, que é a coordenadora nacional das versões portuguesas.
+            O
+            <a
+              href="https://drive.google.com/file/d/14__1tMVUpjEg9mTQwQT_P2vH6XCEPsVW/view?usp=sharing"
+              >DigCompEdu Check-In</a
+            >
+            é uma ferramenta de autorreflexão desenvolvida pelo Joint Research
+            Centre (JRC) da Comissão Europeia, em Sevilha, em colaboração com
+            Margarida Lucas, do CIDTFF - Universidade de Aveiro, que é a
+            coordenadora nacional das versões portuguesas.
           </p>
           <p>
             Esta ferramenta de autorreflexão baseia-se no Quadro Europeu de
@@ -105,8 +110,11 @@ function next() {
       </div>
     </div>
     <label for="siapeInput" class="form-label">
-      Caso queira participar da pesquisa, digite o número de sua matricula
-      SIAPE:
+      Caso queria participar da pesquisa e concorde com o
+      <a
+        href="https://drive.google.com/file/d/1rp_CHsqhYgb3iMfipU5JBplkQE5Ji4Kz/view?usp=sharing"
+        >Termo de Consentimento Livre e Esclarecido - TCLE</a
+      >, digite o numero de sua matrícula SIAPE:
     </label>
     <input
       v-model="inputValue"

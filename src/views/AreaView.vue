@@ -122,7 +122,7 @@ function next() {
               :src="require(`@/assets/imgs/area${id}.png`)"
               class="img07"
               alt=""
-            >
+            />
             <p>
               {{ area.texto }}
             </p>
